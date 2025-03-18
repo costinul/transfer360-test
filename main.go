@@ -133,7 +133,7 @@ func run() error {
 		if err != nil {
 			return fmt.Errorf("failed to process batch file: %v", err)
 		}
-	} else if flags.VRM != "" && flags.Company != "" {
+	} else if flags.VRM != "" {
 		err := checkVehicle(client, ctx, flags.VRM, flags.Company)
 		if err != nil {
 			return fmt.Errorf("failed to check vehicle: %v", err)
