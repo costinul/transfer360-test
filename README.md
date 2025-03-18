@@ -96,7 +96,7 @@ The batch file should be a JSON array of objects with the following structure:
 
 ### Adding New Data Sources
 1. Create a new struct implementing the `VehicleDataSource` interface
-2. Add the new data source to the `dataSources` slice in `dataa.go`
+2. Add the new data source to the `dataSources` slice in `data.go`
 
 ## Troubleshooting
 
@@ -126,8 +126,8 @@ The batch file should be a JSON array of objects with the following structure:
    - To kill the process using port 8085:
      ```bash
      # Windows
-     for /f "tokens=5" %a in ('netstat -aon ^| findstr :8085') do taskkill /F /PID %a
-     
+     execute stopemulator.ps1
+      
      # Linux/macOS
      kill -9 $(lsof -ti :8085)
      ```
